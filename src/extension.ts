@@ -28,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
 		let jsonObj;
 		try {
 				jsonObj = jsonlint.parse(srcText);
-				const formatted = stringify(jsonObj, {maxLength: 80, indent: 2});
+				const formatted = stringify(jsonObj, {maxLength: 200, indent: 2});
 				setSelectionText(formatted);
 		} catch(e) {
 				vscode.window.showInformationMessage("ERROR: " + e);
